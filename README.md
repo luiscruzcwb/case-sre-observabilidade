@@ -2,7 +2,7 @@
 
 Estudo de caso de SRE a partir de um cenário técnico: uma API que degradou de ~200ms para ~5s em produção numa sexta-feira às 18h. O material percorre o ciclo completo, do diagnóstico do incidente à prevenção de recorrência, passando por estratégia de observabilidade, definição de SLIs/SLOs, recomendação de APM/tracing e análise de custo (FinOps).
 
-🔗 **Versão navegável:** [luiscruz.com.br/case-sre](https://luiscruz.com.br/case-sre)
+🔗 **Versão navegável:** <a href="https://luiscruz.com.br/case-sre" target="_blank" rel="noopener">luiscruz.com.br/case-sre</a>
 
 ## O incidente em números
 
