@@ -1,0 +1,8 @@
+Item,Premissa,Atual (US$/mes),Proposto (US$/mes),Observacao
+Premissas globais,"Volume agregado ~50 req/s em pico; ~10 GB de logs/dia; ~50k series ativas; sampling de traces 100% em erros e ~10% no trafego normal",,,Valores estimados; calibrar com dados reais do ambiente
+Compute do stack de monitoramento,"Prometheus, Grafana, Loki, Promtail e OTel Collector em ~2-3 vCPU / 8 GB no AKS",150,180,Cenario proposto adiciona o consumo do backend de traces
+Storage de metricas (Prometheus TSDB),"~50k series ativas, retencao de 15 dias",20,25,Leve aumento com mais dashboards e SLIs
+Storage de logs (Loki + object storage),"~10 GB/dia, retencao de 7 dias",30,30,Mantido com retencao por criticidade
+Backend de tracing (Tempo + storage),"Sampling 100% em erros e lentidao; ~10% no trafego normal",0,90,Maior item novo; custo controlado por sampling
+Rede egress e backup,"Trafego interno do cluster e backup de configuracao",15,20,
+TOTAL estimado,"Soma mensal dos itens acima",215,345,Delta de ~US$130/mes (+60%) pela adocao de tracing

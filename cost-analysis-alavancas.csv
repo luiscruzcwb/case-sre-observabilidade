@@ -1,0 +1,6 @@
+Alavanca,Aplicacao,Impacto esperado,Risco,Como controlar
+Retencao por criticidade,"Logs brutos por 7 dias; eventos criticos com retencao maior",Reducao do custo de storage de logs,Menor disponibilidade de logs antigos,Definir quais eventos exigem retencao estendida
+Sampling de traces,"100% de erros e traces lentos; amostragem do trafego normal",Reducao da ingestao de traces,Perda de alguns exemplos de requisicoes normais,Ajustar a taxa por servico e criticidade
+Controle de cardinalidade,"Evitar labels com request_id, cliente, payload ou paths dinamicos",Reducao de series e do custo de metricas,Menor granularidade em algumas analises,Usar logs e traces para detalhe fino e metricas para agregados
+Filtro de logs ruidosos,"Reduzir logs repetitivos de health check e de scrape de metricas",Reducao de ingestao e de ruido,Risco de remover log util,Validar filtros em ambiente piloto antes de producao
+Alertas por SLO em vez de metricas tecnicas isoladas,"Priorizar burn rate de error budget para acionar on-call",Reducao de toil e de fadiga de alerta,Possivel atraso em sinais puramente tecnicos,Manter metricas tecnicas como contexto e nao como pagina principal
